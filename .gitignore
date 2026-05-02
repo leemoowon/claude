@@ -1,0 +1,45 @@
+# Claude Code 로컬/민감 파일
+.claude/settings.local.json
+.claude/.credentials.json
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+.claude/statsig/
+
+# 비밀 파일
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+
+# 일반 OS / 에디터
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# 로그
+*.log
+logs/
+
+# 언어별 일반 빌드/캐시
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+target/
+*.egg-info/
+
+# 일반 임시
+tmp/
+*.tmp
