@@ -40,10 +40,16 @@ Type: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `wip`
 - 새 에이전트/커맨드/훅이 필요하면 `.claude/` 하위에 추가하고 `docs/claude-code-guide.md` 참고
 - MCP 서버는 `.mcp.json` (팀 공유) + 사용자 레벨 설정으로 관리
 
+## 브랜치 정책
+
+- **base branch 는 항상 `main`** 입니다. Claude Code on the web 에서 새 작업을 만들 때, GitHub Actions `@claude` 멘션을 쓸 때, 그리고 CLI 에서 새 작업 브랜치를 만들 때 모두 `main` 에서 출발하세요.
+- 작업용 브랜치 이름은 Claude Code on the web 이 자동 생성하는 `claude/<주제>-<랜덤ID>` 패턴을 그대로 사용합니다. CLI에서 직접 만들 때도 `feat/<주제>` 또는 `claude/<주제>` 형태를 권장합니다.
+- 작업이 끝나면 PR 의 base 도 `main`. 머지 후 작업 브랜치는 삭제합니다.
+
 ## 작업 흐름 권장
 
-1. 새 작업 시작 → `/new-project` 로 폴더 생성 또는 기존 폴더로 이동
+1. 새 작업 시작 → `main` 에서 출발, `/new-project` 로 폴더 생성 또는 기존 폴더로 이동
 2. 큰 변경 전 → 플랜 모드 (`shift+tab` 두 번) 로 설계 확인
 3. 변경 완료 → `/agents` 의 `code-reviewer` 또는 `/review` 스킬로 셀프 리뷰
 4. 커밋 전 → `/security-review` 로 비밀/보안 점검
-5. 커밋/푸시 → `claude/explore-features-vCIOT` 같은 작업 브랜치 사용
+5. 커밋/푸시 → 작업 브랜치 → PR → `main` 으로 머지
