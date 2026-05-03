@@ -47,3 +47,5 @@ Claude Code 와 함께 사용하는 다목적 작업공간. 여러 프로젝트,
 
 - `CLAUDE.md` - 작업공간 규칙과 컨벤션
 - `docs/claude-code-guide.md` - 하네스 사용/확장 가이드
+- `docs/android-claude-code-guide.md` - 안드로이드 모바일에서 Claude Code 사용 입문자 가이드
+- `docs/anthropic-harness-engineering.md` - Anthropic 하네스 엔지니어링 핵심 요약
